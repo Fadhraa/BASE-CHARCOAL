@@ -1,0 +1,866 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+:root{
+    --bg-white1:#FCFCFC;
+    --bg-white2:#F2f1ef;
+    --black: rgb(17, 16, 16);
+    --yellow: #ddb92d;
+    --text-yellow: #C3964E;
+    --text-dark:#292518;
+    --text-figurw:#DCB97A;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: 0.75s;
+}
+
+.navbar.scrolled {
+    transform: translateY(-100px);
+}
+
+.logo {
+    color: var(--yellow);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+
+}
+.logo-active {
+    display: none;
+}
+.logo img {
+    width: 100px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    font-family: "Segoe UI", "Roboto";
+    font-weight: 600;
+}
+
+ .logo .logo-text span {
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-links .logo{
+    display: none;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--bg-white1);
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ff5500;
+}
+.nav-links i{
+    display: none;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--bg-white1);
+    margin: 5px;
+    transition: 0.4s;
+}
+
+ 
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#PopUp{
+    cursor: pointer;
+}
+#PopUp img{
+    width: 100px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
+#home {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+   background-color: var(--bg-white);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#home .carousel-container {
+    display: none; /* Tampilkan carousel */
+    width: 100%;
+
+    overflow: hidden;
+  }
+  
+  #home .carousel-item >img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+#home >.decoratif{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    bottom: -100px;
+    z-index: -10;
+    min-width: 200px;
+}
+.decoratif img{
+    width: 100%;
+    height: auto;
+}
+.decoratif.left{
+    left: -150px;
+
+}
+.decoratif.right{
+    right: -150px;
+
+}
+.title{
+    display: flex;
+    gap: 10px;
+
+}
+.title h3{
+    margin: 0;
+    padding: 0;
+}
+.title h3:nth-child(2){
+    color: var(--text-figurw);
+}
+.container-card{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    font-family: "Poppins", sans-serif;
+    
+ 
+}
+.container-card .card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-card img{
+    width:31vw;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+}
+.card .caption{
+    
+    width: 80%;
+    height: 150px;
+    background-image: url("Images/bg-img/bg-kertas.jpeg");
+    background-position: center;
+    background-size: cover;
+    text-align: left;
+    position: absolute;
+    bottom: 2%;
+
+
+}
+.card:nth-child(2) > img{
+    height: 100vh
+}
+
+.caption p,.figure,.fig-shadow{
+    margin-left: 10px;
+}
+.caption p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.card .figure{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    width:325px;
+    height: 30px;
+    gap: 10px;
+    color: var(--text-figurw);
+    position: relative;
+    font-size: 20px;
+}
+.card .figure::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-figurw);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.card-logo{
+    width: 100%;
+    height: 200px;
+
+    position: relative;
+}
+.caption > .card-logo  img{
+
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: -17.5px;
+
+    
+}
+.card-logo .fig-shadow {
+    font-size: 42px; 
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(238, 210, 185);
+    margin-bottom: 110px;
+    position: absolute;
+    top: 10px;
+
+}
+
+#About{
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-white2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+#About .Article{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Article .title{
+    display: flex;
+    justify-content: left;
+
+
+    gap: 20px;
+    color: var(--text-yellow);
+}
+.title .line{
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-figurw);
+}
+.Article .content p{
+    text-align: justify;
+    margin-right: 30px;
+    color: rgb(65, 64, 64);
+}
+.Article .content h3{
+    font-weight: 700;
+    font-size: 24px;
+}
+.Article a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--black);
+    color: white;
+    font-size: 14px;
+    font-family: "Roboto";
+    border-radius: 4px;
+    transition: 0.5s;
+    font-weight: 500;
+    width: 140px;
+}
+.Article a:hover{
+    background-color: var(--bg-white1);
+    color: var(--text-dark);
+
+}
+/* Product */
+#Product{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 50px 0 100px 0;
+}
+#Product .title{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 32px;
+    font-family: "Poppins";
+}
+#Product .title h3:nth-child(2){
+    color: var(--text-figurw);
+}
+#Product .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:10px;
+}
+#Product >.content> img{
+    width: 40%;
+    object-fit: cover;
+}
+.discover{
+    width: 100%;
+    display: flex;
+    padding: 50px 0 50px 0;
+    flex-direction: column;
+}
+.discover .content{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.discover .content img{
+    width: 15%;
+    height: auto;
+}
+.Type-Product{
+    display: flex;
+    flex-direction: column;
+}
+.Type-Product >  .title{
+    color: var(--text-dark);
+}
+.Type-Product > .content{
+    display: flex;
+}
+.Type-Product > .content > .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+}
+.Type-Product > .content > .card img{
+    width: 200px;
+    height: 200px;
+}
+
+.carousel-container {
+
+    width: 80%;
+    overflow: hidden;
+    height: 100vh;
+    position: relative; 
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: auto;
+    position: relative;
+}
+.carousel-item .desc{
+    width: 40%;
+   
+ 
+    text-align: justify;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    justify-content: center;
+
+}
+
+
+.carousel-item .desc a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--black);
+    color: white;
+    font-size: 14px;
+    font-family: "Roboto";
+    border-radius: 4px;
+    transition: 0.5s;
+    font-weight: 500;
+    width: 100px;
+}
+.carousel-item .desc a:hover{
+    background-color: var(--bg-white1);
+    color: var(--text-dark);
+
+}
+.carousel-item .desc p{
+    bottom: 20%;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+
+.carousel-item .desc h3{
+    font-family: "Poppins";
+    font-size: 32px;
+    margin: 0;
+    color: var(--text-figurw);
+}
+
+.carousel-item >img{
+    width: 30%;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+}
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(0%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: -5px;
+}
+
+.next-button {
+    right: -5px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Djava */
+#Djava{
+    background-color: var(--bg-white1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 0;
+}
+#Djava .title{
+    font-family: "Poppins";
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+#Djava img{
+ width: 80%;
+ height: auto;
+ object-fit: cover;
+}
+/* Contact */
+#Contact{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bg-white2);
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.address{
+    color: var(--text-figurw);
+    font-family: "Poppins";
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.address .title{
+    font-size: 1.3em;
+    text-shadow: 10px 5px 10px rgba(96, 96, 96, 0.407);
+}
+.address p{
+    font-size: 0.75em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 50px;
+    color: var(--text-dark);
+}
+.venue iframe{
+    width: 600px;
+    height: 450px;
+}
+.venue .title{
+    font-family: "Poppins";
+    color: var(--text-figurw);
+    font-size: 1.3em;
+    text-shadow: 10px 5px 10px rgba(96, 96, 96, 0.407);
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins";
+}
+.operation .title{
+    font-family: "Poppins";
+    color: var(--text-figurw);
+    font-size: 1.3em;
+    text-shadow: 10px 5px 10px rgba(96, 96, 96, 0.407);
+}
+.operation h3{
+    font-size: 1em;
+    font-weight: 700;
+}
+.information .socialmedia{
+    display: flex;
+    flex-direction: column;
+}
+
+.information .socialmedia .title{
+    font-family: "Poppins";
+    color: var(--text-figurw);
+    font-size: 1.3em;
+    text-shadow: 10px 5px 10px rgba(96, 96, 96, 0.407);
+}
+.information .socialmedia .wa,.email{
+    display: flex;
+    gap: 10px;
+    font-size: 1em;
+    align-items: center;
+    font-weight: 500;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--black);
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 10;
+    }
+    .nav-links .logo{
+        display: block;
+
+
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    /* Logo centered for mobile menu */
+
+
+    /* Active state for nav-links (when menu is open) */
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    .navbar.scrolled {
+        transform: translateY(0);
+    }
+    .nav-links .logo-active{
+         
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        display: block;
+        top: 0;
+
+    }
+    .logo-active .logo-text{
+                display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        font-family: "Segoe UI", "Roboto";
+        font-weight: 600;
+        font-size: 2rem;
+        color: var(--yellow);
+    }
+    .logo-active .logo-text span{
+        font: 290px;
+    }
+
+    .nav-links .logo-active img{
+        width: 120px;
+        height: auto;
+        margin-left: 2%;
+    }
+    .nav-links i{
+        display: block;
+
+        position: absolute;
+        z-index: 99;
+        font-size: 32px;
+        color: white;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+    }
+    #home > .container-card{
+        display: none;
+    }
+    .decoratif{
+        display: none;
+        
+    }
+    .container-card {
+        display: none; /* Hide the original card layout */
+    }
+
+    #home .carousel-container {
+        display: block;
+
+        height: auto;
+    }
+
+    #home .carousel-item > img {
+
+        width: 100%;
+        height: 87.75vh;
+        object-position: center;
+        object-fit: cover;
+    }
+    
+    #home .carousel-item{
+        padding: 0;
+
+        gap: 0;
+    }
+    #home .carousel-container .prev-button{
+        left: 5px;
+    }
+    #home .carousel-container .next-button{
+        right: 5px;
+    }
+    .caption-responsif{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-image: url("Images/bg-img/bg-kertas.jpeg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 120px;
+        justify-content: center;
+        bottom: 50px;
+
+
+
+    }
+    
+    .caption-responsif .figure{
+        margin-top: 10px;
+        width: auto;
+        font-weight: 700;
+        
+        height: 30px;
+
+        color: var(--text-figurw);
+        position: relative;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+    }
+    .caption-responsif .figure .line{
+        position: absolute;
+        bottom:-2px;
+        width: 90%;
+        height: 2px;
+        background-color: var(--text-figurw);
+    }
+    .caption-responsif  p{
+        font-size: 14px;
+    }
+    .caption-responsif .card-logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: c;
+        width: 100%;
+        height: 50px;
+
+        bottom: 0;
+
+    }
+    .card-logo .fig-shadow{
+        font-size: 32px;
+        top: 0;
+
+
+    }
+    .caption-responsif .card-logo img{
+        width: 60px;
+        position: absolute;
+        height: 60px;
+        right: 0;
+       
+    }
+    /* About  responsif */
+    #About{
+        display: flex;
+
+        flex-direction: column-reverse;
+
+        padding: 40px 0;
+    }
+    #About .Article{
+        width: 90%;
+    }
+    #About .Article .title{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+    }
+    #About .documentation{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #About .documentation img{
+        width: 90%;
+        height: auto;
+        position: relative;
+    }   
+    
+    .Article .content p{
+        font-size: 12px;
+        margin: 0;
+    }
+    /* Product */
+    #Product{
+        padding: 0;
+    }
+    #Product >.content> img{
+        width: 80%;
+    }
+    #Product .title{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .discover .content img{
+        width: 30%;
+        object-fit: cover;
+        object-position: center;
+    }
+    #Product  .carousel-item{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        justify-content: start;
+    }
+    #Product .carousel-item .desc{
+        width: 95%;
+    }
+    .carousel-item .desc h3{
+        text-align: center;
+    }
+    .carousel-item >img{
+        width: 90%;
+        height: 200px;
+        object-fit: contain;
+    }
+    .Type-Product > .content > .card img{
+        width: 150px;
+        height: 150px;
+    }
+    /* Djava */
+    #Djava{
+        gap: 0;
+        padding: 0;
+    }
+    #Djava .title{
+        font-size: 24px;
+    }
+    #Djava img{
+        width: 100%;
+        height: auto;
+    }
+    /* Contact */
+
+    .address{
+        width: 80%;
+    }
+    .address p{
+        letter-spacing: 1px;
+        
+    }
+    .venue{
+        width: 80%;
+    }
+    .venue iframe{
+        width: 100%;
+        height: 180px;
+    }
+    .information{
+
+        width: 80%;
+    }
+}
