@@ -453,7 +453,7 @@ main{
 }
 .carousel-item .desc p{
     bottom: 20%;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--text-dark);
 }
 
